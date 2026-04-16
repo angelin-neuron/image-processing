@@ -1,4 +1,4 @@
-// This macro batch converts .lif files in a folder to .tif
+// This macro batch converts .lif files in a folder to .tiff
 // It preserves spatial scaling and metadata automatically.
 
 run("Bio-Formats Macro Extensions"); 
@@ -14,6 +14,8 @@ for (i = 0; i < list.length; i++) {
         processFile(input, output, list[i]);
     }
 }
+setBatchMode(false);
+print("I have completed converting all .lif files to .tiff");
 
 function processFile(input, output, file) {
     path = input + file;
@@ -35,5 +37,4 @@ function processFile(input, output, file) {
     }
 }
 
-setBatchMode(false);
-print("I have completed converting all .lif files to .tiff");
+
