@@ -14,7 +14,7 @@ Method 2 (automatic): Batch Converting (Best for many files)
 
 2. Fiji macro code (javascript):
 
-Save the file lif-to-tiff.jim.jim to your machine and in Fiji > Plugins > Run > <Import the file lif-to-tiff.jim.jim>
+Save the file lif-to-tiff.ijm.ijm to your machine and in Fiji > Plugins > Run > <Import the file lif-to-tiff.ijm.ijm>
 Or 
 Copy the code from the file: lif-to-tiff.ijm.ijm into a new script window in Fiji (Plugins > New > Macro) and Run
 
