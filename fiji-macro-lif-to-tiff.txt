@@ -1,3 +1,5 @@
+//Instruction: Copy the below code into a new script window in Fiji (Plugins > New > Macro) and then Run
+
 // This macro batch converts .lif files in a folder to .tif
 // It preserves spatial scaling and metadata automatically.
 
