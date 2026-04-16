@@ -1,0 +1,33 @@
+16-bit vs 8-bit: Ensure you save as 16-bit TIFF if you plan to do quantitative analysis; 8-bit TIFFs lose data for intensity measurements.
+Z-Stacks: If your .lif is a 3D Z-stack, saving it as a TIFF will usually create a multi-page TIFF (one stack in one file). Some software prefers you to export it as an "Image Sequence" (one TIFF file per slice
+
+Method 1 (Manual) :Using Fiji / ImageJ (Best for Researchers)
+Fiji is the gold standard for this because it handles the complex metadata correctly.
+1.	Drag and drop your .lif file into the Fiji status bar.
+2.	The Bio-Formats Import Options window will appear.
+3.	Select the series (images) you want to open and click OK.
+4.	Once the image is open, go to File > Save As > Tiff... 
+
+Method 2 (automatic): Batch Converting (Best for many files)
+2.1 Fiji Macro: You can use a built-in or custom macro (like Lif2Tiff) to automate the process. These macros can automatically split channels and save them as individual TIFFs.
+2.2 Command Line: For power users, the "bfconvert" tool from the Bio-Formats command line interface can convert large datasets without opening the Fiji GUI.
+
+2. Fiji macro code (javascript):
+
+Save the file lif-to-tiff.jim.jim to your machine and in Fiji > Plugins > Run > <Import the file lif-to-tiff.jim.jim>
+Or 
+Copy the code from the file: lif-to-tiff.ijm.ijm into a new script window in Fiji (Plugins > New > Macro) and Run
+
+
+extra: 
+// Optional: Add the below line Uncomment the next line if you want to burn a scale bar into the image pixels
+// run("Scale Bar...", "width=10 height=4 font=12 color=White background=None location=[Lower Right] bold overlay");
+
+Note: consider using Lif2Tiff, a specialized ImageJ macro that includes a user interface for choosing whether to split channels or maintain stacks.
+
+2.1 Modify it to perform Maximum Intensity Projections on Z-stacks automatically.
+(TBC)
+
+2.2 Help you split channels into separate folders. 
+
+(TBC)
